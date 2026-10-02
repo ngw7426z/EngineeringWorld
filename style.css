@@ -1,0 +1,1102 @@
+/* =========================
+   기본 설정
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    background: #f5f5f5;
+    color: #111;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   사이드바
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background: #111;
+    color: white;
+
+    padding: 35px 20px;
+
+    z-index: 1000;
+
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar h2 {
+    text-align: center;
+
+    font-size: 24px;
+
+    margin-bottom: 40px;
+}
+
+.sidebar nav a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 18px;
+
+    margin-bottom: 8px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    background: white;
+    color: #111;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   메인
+========================= */
+
+.main {
+    margin-left: 230px;
+
+    width: calc(100% - 230px);
+}
+
+
+/* =========================
+   첫 화면
+========================= */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 70px 8%;
+
+    color: white;
+
+    background: #111;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.small-title {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+    color: #ccc;
+}
+
+.hero h1 {
+    font-size: 52px;
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+    color: #ddd;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: white;
+
+    color: #111;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #ddd;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   섹션
+========================= */
+
+section {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 70px auto;
+}
+
+section h2 {
+    color: #111;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   공학이란?
+========================= */
+
+.intro-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.intro-icon {
+    min-width: 90px;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 20px;
+
+    font-size: 45px;
+}
+
+.intro-box h3 {
+    color: #111;
+
+    margin-bottom: 10px;
+}
+
+.intro-box p {
+    margin-bottom: 8px;
+
+    color: #444;
+}
+
+
+/* =========================
+   섹션 제목
+========================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-title p {
+    color: #666;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.section-title h2 {
+    margin-bottom: 8px;
+}
+
+.section-title span {
+    color: #666;
+}
+
+
+/* =========================
+   공학 카드
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+.card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+    align-self: start;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: #111;
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 카드 클릭 부분 */
+
+.card-title {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.card-icon {
+    width: 80px;
+
+    height: 80px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 40px;
+
+    transition: 0.3s;
+}
+
+.card:hover .card-icon {
+    transform: scale(1.1);
+
+    background: #333;
+}
+
+.card-title h3 {
+    color: #111;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.card-title p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.click-text {
+    display: inline-block;
+
+    color: #111;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   학과 설명
+========================= */
+
+.info {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    padding: 0 22px;
+
+    background: #fafafa;
+
+    border-top: 0 solid #ddd;
+
+    transition:
+        max-height 0.6s ease,
+        opacity 0.5s ease,
+        padding 0.6s ease,
+        border-top 0.6s ease;
+}
+
+.info.show {
+    max-height: 500px;
+
+    opacity: 1;
+
+    padding: 22px;
+
+    border-top: 1px solid #ddd;
+}
+
+.info h3 {
+    color: #111;
+
+    margin-bottom: 12px;
+}
+
+.info h4 {
+    color: #333;
+
+    margin-top: 18px;
+
+    margin-bottom: 5px;
+}
+
+.info ul {
+    padding-left: 20px;
+}
+
+
+/* =========================
+   필요한 능력
+========================= */
+
+.skill-box {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.skill-box > div {
+    background: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.skill-box > div:hover {
+    transform: translateY(-5px);
+
+    border-color: #111;
+}
+
+.skill-box strong {
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.skill-box h3 {
+    color: #111;
+
+    margin-bottom: 7px;
+}
+
+.skill-box p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   퀴즈
+========================= */
+
+.quiz-box {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.quiz-box h3 {
+    margin-bottom: 25px;
+}
+
+.quiz-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.quiz-buttons button {
+    border: 1px solid #111;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.quiz-buttons button:hover {
+    background: white;
+
+    color: #111;
+
+    transform: translateY(-3px);
+}
+
+#quiz-result {
+    margin-top: 25px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    min-height: 30px;
+}
+
+#quiz-result.correct {
+    color: #111;
+}
+
+#quiz-result.wrong {
+    color: #666;
+}
+
+
+/* =========================
+   나의 진로
+========================= */
+
+.career-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.career-icon {
+    font-size: 55px;
+
+    min-width: 90px;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 20px;
+}
+
+.career-box h3 {
+    color: #111;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   푸터
+========================= */
+
+footer {
+    margin-top: 80px;
+
+    padding: 30px;
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+}
+
+footer p {
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+footer span {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   태블릿
+========================= */
+
+@media (max-width: 1000px) {
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .skill-box {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+
+/* =========================
+   휴대폰
+========================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 15px;
+    }
+
+    .sidebar nav {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    .sidebar nav a {
+        padding: 8px 12px;
+
+        margin: 0;
+
+        font-size: 13px;
+    }
+
+    .main {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .hero {
+        min-height: 430px;
+
+        padding: 50px 8%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-box {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-box,
+    .career-box {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    section {
+        width: 88%;
+
+        margin: 50px auto;
+    }
+}
+/* 페이지 제목 */
+.page-header {
+    background: #111;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #ddd;
+}
+
+
+/* 메인 안내 카드 */
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.guide-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-card a {
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* 능력 카드 */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* 진로 목표 */
+.goal-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.goal-box h3 {
+    margin-top: 20px;
+}
+
+.goal-box h3:first-child {
+    margin-top: 0;
+}
+.question {
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.question:last-child {
+    border-bottom: none;
+}
+
+.question h2 {
+    margin-bottom: 15px;
+}
+
+.question p {
+    line-height: 1.7;
+}
+
+.correct {
+    color: #111;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.wrong {
+    color: #666;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* =========================
+   공학 퀴즈
+========================= */
+
+.quiz-main {
+    min-height: 100vh;
+}
+
+.quiz-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+
+/* 퀴즈 제목 */
+
+.quiz-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quiz-title h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.quiz-title p {
+    color: #666;
+}
+
+
+/* 진행 상황 */
+
+.quiz-progress {
+    margin-bottom: 20px;
+}
+
+.quiz-progress span {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 20%;
+    height: 100%;
+    background: #111;
+    transition: width 0.4s ease;
+}
+
+
+/* 문제 카드 */
+
+.quiz-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.quiz-card h2 {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+/* 답 버튼 */
+
+.answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.answer-buttons button {
+    background: #111;
+    color: white;
+    border: 2px solid #111;
+    border-radius: 10px;
+    padding: 17px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer-buttons button:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* 정답 버튼 */
+
+.answer-buttons button.correct-answer {
+    background: white;
+    color: #111;
+    border: 2px solid #111;
+}
+
+
+/* 오답 버튼 */
+
+.answer-buttons button.wrong-answer {
+    background: #ddd;
+    color: #555;
+    border: 2px solid #aaa;
+}
+
+
+/* 결과 메시지 */
+
+#feedback {
+    min-height: 30px;
+    margin: 25px 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#feedback.correct {
+    color: #111;
+}
+
+#feedback.wrong {
+    color: #777;
+}
+
+
+/* 다음 문제 버튼 */
+
+#next-button {
+    display: none;
+    margin: 20px auto 0;
+    padding: 14px 30px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#next-button:hover {
+    background: #333;
+}
+
+
+/* 최종 결과 */
+
+.result-screen {
+    display: none;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 60px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.result-screen h1 {
+    margin-bottom: 20px;
+}
+
+.result-screen p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.result-screen button {
+    padding: 14px 30px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 700px) {
+
+    .quiz-card {
+        padding: 25px;
+    }
+
+    .quiz-card h2 {
+        font-size: 20px;
+    }
+
+    .answer-buttons {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   최신 연구
+========================= */
+
+.latest-research {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-left: 4px solid #111;
+    border-radius: 8px;
+}
+
+.latest-research h4 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.latest-research h5 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.latest-research p {
+    line-height: 1.7;
+}
+
+.latest-research .research-summary {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.latest-research small {
+    display: block;
+    margin-top: 15px;
+    color: #666;
+}

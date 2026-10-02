@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공학 퀴즈 - Engineering World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="subpages.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <h2>🔧 Engineering</h2>
+
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="intro.html">공학이란?</a>
+        <a href="fields.html">공학 분야</a>
+        <a href="skills.html">필요한 능력</a>
+        <a href="quiz.html">공학 퀴즈</a>
+        <a href="career.html">나의 진로</a>
+    </nav>
+
+</aside>
+
+
+<main class="main quiz-main">
+
+    <div class="quiz-container">
+
+        <div class="quiz-title">
+            <h1>🧩 공학 퀴즈</h1>
+            <p>공학에 관한 문제를 하나씩 풀어보세요!</p>
+        </div>
+
+
+        <!-- 진행 상황 -->
+        <div class="quiz-progress">
+
+            <span id="question-number">문제 1 / 5</span>
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+        </div>
+
+
+        <!-- 문제 -->
+        <div class="quiz-card">
+
+            <h2 id="question">
+                인공지능(AI), 웹사이트, 앱 등을 개발하는
+                대표적인 공학 분야는 무엇일까요?
+            </h2>
+
+
+            <div id="answers" class="answer-buttons">
+
+                <button onclick="selectAnswer(0)">
+                    기계공학
+                </button>
+
+                <button onclick="selectAnswer(1)">
+                    컴퓨터공학
+                </button>
+
+                <button onclick="selectAnswer(2)">
+                    건축공학
+                </button>
+
+                <button onclick="selectAnswer(3)">
+                    항공우주공학
+                </button>
+
+            </div>
+
+
+            <!-- 정답 메시지 -->
+            <p id="feedback"></p>
+
+
+            <!-- 다음 버튼 -->
+            <button id="next-button" onclick="nextQuestion()">
+                다음 문제 →
+            </button>
+
+        </div>
+
+
+        <!-- 최종 결과 -->
+        <div id="result-screen" class="result-screen">
+
+            <h1>🎉 퀴즈 완료!</h1>
+
+            <p id="score"></p>
+
+            <button onclick="restartQuiz()">
+                다시 풀기
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>Engineering World | 고등학교 수행평가</p>
+    </footer>
+
+</main>
+
+
+<script>
+
+const questions = [
+
+    {
+        question:
+            "인공지능(AI), 웹사이트, 앱 등을 개발하는 대표적인 공학 분야는 무엇일까요?",
+
+        answers: [
+            "기계공학",
+            "컴퓨터공학",
+            "건축공학",
+            "항공우주공학"
+        ],
+
+        correct: 1
+    },
+
+
+    {
+        question:
+            "로봇을 설계하고 움직임을 제어하는 기술과 가장 관련이 깊은 공학 분야는 무엇일까요?",
+
+        answers: [
+            "로봇공학",
+            "건축공학",
+            "환경공학",
+            "화학공학"
+        ],
+
+        correct: 0
+    },
+
+
+    {
+        question:
+            "반도체, 전자회로, 전기 시스템 등을 연구하는 공학 분야는 무엇일까요?",
+
+        answers: [
+            "자동차공학",
+            "전기전자공학",
+            "건축공학",
+            "항공우주공학"
+        ],
+
+        correct: 1
+    },
+
+
+    {
+        question:
+            "자동차의 자율주행 기술과 가장 관련이 깊은 분야는 무엇일까요?",
+
+        answers: [
+            "자동차공학",
+            "건축공학",
+            "토목공학",
+            "환경공학"
+        ],
+
+        correct: 0
+    },
+
+
+    {
+        question:
+            "비행기, 로켓, 인공위성 등의 설계와 제작을 연구하는 공학 분야는 무엇일까요?",
+
+        answers: [
+            "컴퓨터공학",
+            "전기전자공학",
+            "항공우주공학",
+            "건축공학"
+        ],
+
+        correct: 2
+    }
+
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+
+function showQuestion() {
+
+    answered = false;
+
+    const question = questions[currentQuestion];
+
+    document.getElementById("question").textContent =
+        question.question;
+
+
+    document.getElementById("question-number").textContent =
+        "문제 " + (currentQuestion + 1) + " / " + questions.length;
+
+
+    const progress =
+        ((currentQuestion + 1) / questions.length) * 100;
+
+    document.getElementById("progress").style.width =
+        progress + "%";
+
+
+    const answersContainer =
+        document.getElementById("answers");
+
+    answersContainer.innerHTML = "";
+
+
+    question.answers.forEach(function(answer, index) {
+
+        const button = document.createElement("button");
+
+        button.textContent = answer;
+
+        button.onclick = function() {
+            selectAnswer(index);
+        };
+
+        answersContainer.appendChild(button);
+
+    });
+
+
+    document.getElementById("feedback").textContent = "";
+
+    document.getElementById("feedback").className = "";
+
+
+    document.getElementById("next-button").style.display =
+        "none";
+
+}
+
+
+function selectAnswer(index) {
+
+    if (answered) {
+        return;
+    }
+
+    answered = true;
+
+
+    const question = questions[currentQuestion];
+
+    const buttons =
+        document.querySelectorAll(".answer-buttons button");
+
+
+    if (index === question.correct) {
+
+        score++;
+
+        document.getElementById("feedback").textContent =
+            "🎉 정답입니다!";
+
+        document.getElementById("feedback").className =
+            "correct";
+
+        buttons[index].classList.add("correct-answer");
+
+    } else {
+
+        document.getElementById("feedback").textContent =
+            "❌ 아쉽습니다! 정답을 확인해 보세요.";
+
+        document.getElementById("feedback").className =
+            "wrong";
+
+        buttons[index].classList.add("wrong-answer");
+
+        buttons[question.correct].classList.add("correct-answer");
+
+    }
+
+
+    document.getElementById("next-button").style.display =
+        "block";
+
+}
+
+
+function nextQuestion() {
+
+    currentQuestion++;
+
+
+    if (currentQuestion < questions.length) {
+
+        showQuestion();
+
+    } else {
+
+        showResult();
+
+    }
+
+}
+
+
+function showResult() {
+
+    document.querySelector(".quiz-card").style.display =
+        "none";
+
+    document.querySelector(".quiz-progress").style.display =
+        "none";
+
+    document.querySelector(".quiz-title").style.display =
+        "none";
+
+    document.getElementById("result-screen").style.display =
+        "block";
+
+
+    document.getElementById("score").textContent =
+        "총 5문제 중 " + score + "문제를 맞혔습니다!";
+
+}
+
+
+function restartQuiz() {
+
+    currentQuestion = 0;
+
+    score = 0;
+
+    document.querySelector(".quiz-card").style.display =
+        "block";
+
+    document.querySelector(".quiz-progress").style.display =
+        "block";
+
+    document.querySelector(".quiz-title").style.display =
+        "block";
+
+    document.getElementById("result-screen").style.display =
+        "none";
+
+
+    showQuestion();
+
+}
+
+
+showQuestion();
+
+</script>
+
+</body>
+</html>

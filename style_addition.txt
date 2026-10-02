@@ -1,0 +1,18 @@
+/* 공학 분야 카드: 새 탭으로 이동하는 링크 */
+.card-title {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.card-title:hover {
+    text-decoration: none;
+}
+.new-page-note {
+    margin-top: 15px;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f7f7f7;
+    color: #333;
+}
