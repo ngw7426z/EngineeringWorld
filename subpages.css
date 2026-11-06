@@ -134,3 +134,100 @@ footer{max-width:1180px;margin:34px auto 0;padding:26px 0 32px;border-top:1px so
         bottom:-145px;
     }
 }
+
+
+/* ===== SCROLL MOTION + REVEAL ANIMATIONS ===== */
+.page-header::before{
+    background-position: 0 var(--dot-motion, 0px);
+}
+.page-header::after{
+    transform: translate3d(0, var(--scroll-motion, 0px), 0);
+    transition: transform .08s linear;
+}
+.sidebar::after{
+    background-position: 0 var(--dot-motion, 0px);
+}
+.reveal-on-scroll{
+    opacity:0;
+    transform:translate3d(0,28px,0);
+    transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+    transition-delay:var(--reveal-delay, 0ms);
+}
+.reveal-on-scroll.is-visible{
+    opacity:1;
+    transform:translate3d(0,0,0);
+}
+.cards .card[hidden]{
+    display:none !important;
+}
+
+/* ===== FIELD SEARCH ===== */
+.field-search-wrap{
+    margin:0 0 24px;
+    padding:22px 24px;
+    border:1px solid #e6e6e6;
+    border-radius:14px;
+    background:#fafafa;
+}
+.field-search-label{
+    display:block;
+    margin-bottom:11px;
+    color:#888;
+    font:700 10px "Space Grotesk","Noto Sans KR",sans-serif;
+    letter-spacing:2px;
+}
+.field-search-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-height:56px;
+    padding:0 16px;
+    border:1px solid #d9d9d9;
+    border-radius:10px;
+    background:#fff;
+    transition:border-color .2s, box-shadow .2s;
+}
+.field-search-box:focus-within{
+    border-color:#111;
+    box-shadow:0 0 0 3px rgba(0,0,0,.07);
+}
+.field-search-box>span{
+    color:#777;
+    font-size:26px;
+    line-height:1;
+}
+.field-search-box input{
+    flex:1;
+    width:100%;
+    min-width:0;
+    border:0;
+    outline:0;
+    background:transparent;
+    color:#111;
+    font:500 14px "Noto Sans KR","Malgun Gothic",sans-serif;
+}
+.field-search-box input::placeholder{color:#aaa}
+.field-search-box kbd{
+    color:#999;
+    font:600 9px "Space Grotesk",sans-serif;
+    letter-spacing:1px;
+}
+.field-search-hint{
+    margin:10px 0 0 !important;
+    color:#999 !important;
+    font-size:11px !important;
+}
+.search-empty{
+    margin:0 0 18px;
+    padding:24px;
+    border:1px dashed #ccc;
+    border-radius:12px;
+    color:#777;
+    text-align:center;
+    font-size:14px;
+}
+@media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal-on-scroll{opacity:1;transform:none;transition:none}
+    .page-header::after{transform:none}
+}
