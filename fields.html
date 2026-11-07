@@ -1,336 +1,200 @@
 <!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>공학 분야 - Engineering World</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="subpages.css">
-</head>
-
-
-<body>
-
-
-<!-- =========================
-     사이드바
-========================= -->
-
-<aside class="sidebar">
-
-    <h2>🔧 Engineering</h2>
-
-    <nav>
-
-        <a href="index.html">홈</a>
-
-        <a href="intro.html">공학이란?</a>
-
-        <a href="fields.html">공학 분야</a>
-
-        <a href="skills.html">필요한 능력</a>
-
-        <a href="quiz.html">공학 퀴즈</a>
-
-        <a href="career.html">나의 진로</a>
-
-    </nav>
-
-</aside>
-
-
-
-<!-- =========================
-     메인
-========================= -->
-
-<main class="main">
-
-
-    <section class="page-header">
-
-        <h1>대표 공학 분야</h1>
-
-        <p>
-            다양한 공학 분야와 최신 연구를 알아보세요.
-        </p>
-        <p class="new-page-note">
-            💡 각 공학 카드를 누르면 자세한 설명이 <strong>새 탭</strong>에서 열립니다.
-        </p>
-
-
-    </section>
-
-
-
-    <section class="section">
-
-
-        
-        <div class="field-search-wrap">
-            <label class="field-search-label" for="field-search">SEARCH ENGINEERING FIELDS</label>
-            <div class="field-search-box">
-                <span aria-hidden="true">⌕</span>
-                <input
-                    type="search"
-                    id="field-search"
-                    placeholder="공학 분야를 검색해 보세요. 예: 로봇, 컴퓨터, 항공우주"
-                    autocomplete="off"
-                >
-                <kbd>SEARCH</kbd>
-            </div>
-            <p class="field-search-hint">분야 이름이나 특징을 입력하면 관련 카드가 표시됩니다.</p>
-        </div>
-        <p id="search-empty" class="search-empty" hidden>검색 결과가 없습니다. 다른 단어로 검색해 보세요.</p>
-
-        <div class="cards">
-
-
-            <!-- =========================
-                 컴퓨터공학
-            ========================= -->
-
-            <article class="card">
-
-                <a
-                    class="card-title"
-                    href="computer.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <div class="card-icon">
-                        💻
-                    </div>
-
-                    <h3>컴퓨터공학</h3>
-
-                    <p>
-                        컴퓨터와 소프트웨어를 연구합니다.
-                    </p>
-
-                    <span class="click-text">
-                        자세히 보기 +
-                    </span>
-
-                </a>
-
-
-                
-
-            </article>
-
-
-
-            <!-- =========================
-                 로봇공학
-            ========================= -->
-
-            <article class="card">
-
-                <a
-                    class="card-title"
-                    href="robot.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <div class="card-icon">
-                        🤖
-                    </div>
-
-                    <h3>로봇공학</h3>
-
-                    <p>
-                        로봇을 설계하고 제어합니다.
-                    </p>
-
-                    <span class="click-text">
-                        자세히 보기 +
-                    </span>
-
-                </a>
-
-
-                
-
-            </article>
-
-
-
-            <!-- =========================
-                 전기전자공학
-            ========================= -->
-
-            <article class="card">
-
-                <a
-                    class="card-title"
-                    href="electric.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <div class="card-icon">
-                        ⚡
-                    </div>
-
-                    <h3>전기전자공학</h3>
-
-                    <p>
-                        전기와 전자 기술을 연구합니다.
-                    </p>
-
-                    <span class="click-text">
-                        자세히 보기 +
-                    </span>
-
-                </a>
-
-
-                
-
-            </article>
-
-
-
-            <!-- =========================
-                 건축공학
-            ========================= -->
-
-            <article class="card">
-
-                <a
-                    class="card-title"
-                    href="building.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <div class="card-icon">
-                        🏢
-                    </div>
-
-                    <h3>건축공학</h3>
-
-                    <p>
-                        안전하고 튼튼한 건물을 연구합니다.
-                    </p>
-
-                    <span class="click-text">
-                        자세히 보기 +
-                    </span>
-
-                </a>
-
-
-                
-
-            </article>
-
-
-
-            <!-- =========================
-                 자동차공학
-            ========================= -->
-
-            <article class="card">
-
-                <a
-                    class="card-title"
-                    href="car.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <div class="card-icon">
-                        🚗
-                    </div>
-
-                    <h3>자동차공학</h3>
-
-                    <p>
-                        자동차의 구조와 기술을 연구합니다.
-                    </p>
-
-                    <span class="click-text">
-                        자세히 보기 +
-                    </span>
-
-                </a>
-
-
-                
-
-            </article>
-
-
-
-            <!-- =========================
-                 항공우주공학
-            ========================= -->
-
-            <article class="card">
-
-                <a
-                    class="card-title"
-                    href="aerospace.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <div class="card-icon">
-                        🚀
-                    </div>
-
-                    <h3>항공우주공학</h3>
-
-                    <p>
-                        비행기와 우주 기술을 연구합니다.
-                    </p>
-
-                    <span class="click-text">
-                        자세히 보기 +
-                    </span>
-
-                </a>
-
-
-                
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <footer>
-
-        <p>
-            Engineering World | 고등학교 수행평가
-        </p>
-
-    </footer>
-
-
-</main>
-
-
-
-<!-- =========================
-     JavaScript
-========================= -->
-
-
-
-
-    <script src="site.js" defer></script>
-</body>
-
-</html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="33가지 공학 분야의 특징과 진로를 탐색해 보세요."><title>공학 분야 | Engineering World</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="subpages.css"><link rel="stylesheet" href="fields-extra.css"></head><body>
+<aside class="sidebar"><h2>🔧 Engineering</h2><nav>
+<a href="index.html">홈</a><a href="intro.html">공학이란?</a><a class="active" href="fields.html">공학 분야</a>
+<a href="skills.html">필요한 능력</a><a href="quiz.html">공학 퀴즈</a><a href="career.html">나의 진로</a></nav></aside>
+<main class="main fields-main">
+<section class="page-header fields-hero"><span class="hero-kicker">EXPLORE / 033 ENGINEERING FIELDS</span>
+<h1>세상을 움직이는<br><em>33가지 공학의 세계</em></h1><p>관심 있는 기술을 찾고, 그 기술을 만드는 공학 분야를 탐험해 보세요.</p>
+<div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-orbit orbit-three"></div>
+<span class="hero-index">ENGINEERING<br>DISCOVERY</span></section>
+<section class="field-explorer"><div class="explorer-heading"><div><span class="section-eyebrow">FIND YOUR FIELD</span>
+<h2>어떤 공학이 궁금한가요?</h2><p>이름, 기술, 관련 키워드로 검색하거나 분야별로 골라보세요.</p></div>
+<div class="total-counter"><strong>33</strong><span>FIELDS TO EXPLORE</span></div></div>
+<div class="field-search-wrap"><label class="field-search-label" for="field-search">SEARCH ENGINEERING FIELDS</label>
+<div class="field-search-box"><span aria-hidden="true">⌕</span><input type="search" id="field-search" placeholder="예: 인공지능, 배터리, 우주, 환경, 로봇..." autocomplete="off">
+<kbd>SEARCH</kbd><button type="button" id="clear-search" aria-label="검색어 지우기">×</button></div>
+<p class="field-search-hint">검색어를 입력하면 관련 공학 분야만 보여줍니다.</p></div>
+<div class="field-filters" role="group" aria-label="공학 분야 분류">
+<button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">전체 <span>33</span></button>
+<button type="button" class="filter-chip" data-filter="ict" aria-pressed="false">디지털·정보통신</button>
+<button type="button" class="filter-chip" data-filter="mobility" aria-pressed="false">기계·모빌리티</button>
+<button type="button" class="filter-chip" data-filter="construction" aria-pressed="false">건설·도시</button>
+<button type="button" class="filter-chip" data-filter="energy" aria-pressed="false">에너지·환경</button>
+<button type="button" class="filter-chip" data-filter="materials" aria-pressed="false">소재·화학</button>
+<button type="button" class="filter-chip" data-filter="bio" aria-pressed="false">바이오·생활</button></div>
+<div class="results-line"><span id="result-count" aria-live="polite">전체 33개 분야</span><span>카드를 선택하면 상세 설명이 새 탭에서 열립니다 ↗</span></div>
+<div class="cards field-cards" id="field-cards"><article class="card field-card" data-category="ict" data-keywords="컴퓨터 코딩 프로그래밍 하드웨어 소프트웨어">
+<a class="card-title field-card-link" href="computer.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">01</span><span class="field-icon">💻</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">디지털·정보통신</span><h3>컴퓨터공학</h3><p>컴퓨터 하드웨어와 소프트웨어, 시스템의 원리를 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="ict" data-keywords="로봇 자동화 센서 제어 로봇팔">
+<a class="card-title field-card-link" href="robot.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">02</span><span class="field-icon">🤖</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">디지털·정보통신</span><h3>로봇공학</h3><p>센서와 기계 장치, 인공지능을 결합해 로봇을 만듭니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="ict" data-keywords="AI 인공지능 머신러닝 딥러닝">
+<a class="card-title field-card-link" href="ai.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">03</span><span class="field-icon">🧠</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">디지털·정보통신</span><h3>인공지능공학</h3><p>데이터를 학습해 판단하고 예측하는 기술을 개발합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="ict" data-keywords="데이터 빅데이터 분석 데이터베이스 통계">
+<a class="card-title field-card-link" href="data.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">04</span><span class="field-icon">📊</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">디지털·정보통신</span><h3>데이터공학</h3><p>대량의 데이터를 수집·저장·처리해 가치 있는 정보로 만듭니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="ict" data-keywords="소프트웨어 앱 웹 개발 코딩">
+<a class="card-title field-card-link" href="software.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">05</span><span class="field-icon">🧩</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">디지털·정보통신</span><h3>소프트웨어공학</h3><p>믿고 사용할 수 있는 소프트웨어를 체계적으로 개발합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="ict" data-keywords="반도체 칩 웨이퍼 메모리 CPU">
+<a class="card-title field-card-link" href="semiconductor.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">06</span><span class="field-icon">🔬</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">디지털·정보통신</span><h3>반도체공학</h3><p>전자제품의 핵심 부품인 반도체 소자와 제조 기술을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="ict" data-keywords="통신 네트워크 5G 6G 위성 무선">
+<a class="card-title field-card-link" href="telecom.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">07</span><span class="field-icon">📡</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">디지털·정보통신</span><h3>정보통신공학</h3><p>정보를 빠르고 정확하게 주고받는 통신 시스템을 설계합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="ict" data-keywords="제어 계측 센서 자동화 측정">
+<a class="card-title field-card-link" href="control.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">08</span><span class="field-icon">🎛️</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">디지털·정보통신</span><h3>제어계측공학</h3><p>센서로 상태를 측정하고 장치가 원하는 대로 움직이게 제어합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="mobility" data-keywords="기계 설계 역학 엔진 생산">
+<a class="card-title field-card-link" href="mechanical.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">09</span><span class="field-icon">⚙️</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">기계·모빌리티</span><h3>기계공학</h3><p>기계의 움직임과 에너지, 구조를 분석하고 장치를 설계합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="mobility" data-keywords="자동차 차 전기차 자율주행 배터리">
+<a class="card-title field-card-link" href="car.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">10</span><span class="field-icon">🚗</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">기계·모빌리티</span><h3>자동차공학</h3><p>자동차의 구조와 안전, 전동화·자율주행 기술을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="mobility" data-keywords="항공 비행기 우주 로켓 위성">
+<a class="card-title field-card-link" href="aerospace.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">11</span><span class="field-icon">🚀</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">기계·모빌리티</span><h3>항공우주공학</h3><p>비행기와 우주선, 인공위성의 비행 원리와 구조를 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="mobility" data-keywords="조선 선박 배 바다 해양">
+<a class="card-title field-card-link" href="marine.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">12</span><span class="field-icon">🚢</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">기계·모빌리티</span><h3>조선해양공학</h3><p>선박과 해양 구조물의 설계·건조 기술을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="mobility" data-keywords="산업 생산 공장 물류 품질 효율">
+<a class="card-title field-card-link" href="industrial.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">13</span><span class="field-icon">🏭</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">기계·모빌리티</span><h3>산업공학</h3><p>사람·기계·정보가 효율적으로 일하도록 시스템을 개선합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="mobility" data-keywords="교통 도로 철도 대중교통 신호">
+<a class="card-title field-card-link" href="transport.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">14</span><span class="field-icon">🚦</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">기계·모빌리티</span><h3>교통공학</h3><p>도로와 대중교통, 이동 흐름을 분석해 안전한 교통을 만듭니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="mobility" data-keywords="안전 산업재해 사고 예방 위험">
+<a class="card-title field-card-link" href="safety.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">15</span><span class="field-icon">🦺</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">기계·모빌리티</span><h3>안전공학</h3><p>산업 현장과 시설의 위험을 분석해 사고를 예방합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="construction" data-keywords="건축 건물 빌딩 설계 시공">
+<a class="card-title field-card-link" href="building.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">16</span><span class="field-icon">🏢</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">건설·도시</span><h3>건축공학</h3><p>건물이 안전하고 쾌적하게 사용되도록 구조와 설비를 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="construction" data-keywords="토목 다리 교량 터널 도로 댐">
+<a class="card-title field-card-link" href="civil.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">17</span><span class="field-icon">🌉</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">건설·도시</span><h3>토목공학</h3><p>도로와 다리, 터널 등 사회 기반 시설을 설계하고 건설합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="construction" data-keywords="도시 계획 스마트시티 주거 공간">
+<a class="card-title field-card-link" href="urban.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">18</span><span class="field-icon">🏙️</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">건설·도시</span><h3>도시공학</h3><p>주거와 교통, 환경을 고려해 살기 좋은 도시를 계획합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="construction" data-keywords="지반 토질 흙 암석 지질 기초">
+<a class="card-title field-card-link" href="geotech.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">19</span><span class="field-icon">🪨</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">건설·도시</span><h3>지반공학</h3><p>땅과 암석의 성질을 분석해 기초와 사면, 터널의 안전을 확보합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="construction" data-keywords="물 수자원 하천 홍수 가뭄 댐">
+<a class="card-title field-card-link" href="water.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">20</span><span class="field-icon">💧</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">건설·도시</span><h3>수자원공학</h3><p>물의 흐름과 홍수, 하천과 댐을 과학적으로 관리합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="energy" data-keywords="전기 전자 회로 전력 배터리 모터">
+<a class="card-title field-card-link" href="electric.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">21</span><span class="field-icon">⚡</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">에너지·환경</span><h3>전기전자공학</h3><p>전기 에너지와 전자회로, 전력·제어 시스템을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="energy" data-keywords="에너지 발전 저장 효율 전력">
+<a class="card-title field-card-link" href="energy.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">22</span><span class="field-icon">🔋</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">에너지·환경</span><h3>에너지공학</h3><p>에너지를 효율적으로 생산하고 저장하고 활용하는 방법을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="energy" data-keywords="신재생 재생에너지 태양광 풍력 수소">
+<a class="card-title field-card-link" href="renewable.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">23</span><span class="field-icon">☀️</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">에너지·환경</span><h3>신재생에너지공학</h3><p>태양광과 풍력 등 지속 가능한 에너지 기술을 개발합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="energy" data-keywords="원자력 원자핵 방사선 발전 안전">
+<a class="card-title field-card-link" href="nuclear.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">24</span><span class="field-icon">☢️</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">에너지·환경</span><h3>원자력공학</h3><p>원자핵 반응과 방사선의 원리를 연구하고 안전하게 활용합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="energy" data-keywords="환경 오염 대기 수질 미세먼지 폐기물">
+<a class="card-title field-card-link" href="environment.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">25</span><span class="field-icon">🌱</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">에너지·환경</span><h3>환경공학</h3><p>물과 공기, 토양 오염을 줄이고 환경을 보호하는 기술을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="materials" data-keywords="화학 공정 반응 물질 생산">
+<a class="card-title field-card-link" href="chemical.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">26</span><span class="field-icon">🧪</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">소재·화학</span><h3>화학공학</h3><p>화학 반응과 공정 기술로 다양한 물질과 제품을 생산합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="materials" data-keywords="소재 재료 금속 세라믹 고분자">
+<a class="card-title field-card-link" href="materials.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">27</span><span class="field-icon">💎</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">소재·화학</span><h3>신소재공학</h3><p>더 가볍고 강하거나 특별한 성질을 가진 재료를 개발합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="materials" data-keywords="섬유 옷감 원단 패션 탄소섬유">
+<a class="card-title field-card-link" href="textile.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">28</span><span class="field-icon">🧵</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">소재·화학</span><h3>섬유공학</h3><p>옷감과 산업용 섬유, 기능성 소재의 제조와 성능을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="bio" data-keywords="의공 의료 의학 의료기기 인체 진단">
+<a class="card-title field-card-link" href="biomedical.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">29</span><span class="field-icon">🩺</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">바이오·생활</span><h3>의공학</h3><p>공학 기술로 질병의 진단과 치료, 재활을 돕는 의료기기를 개발합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="bio" data-keywords="생명 바이오 유전자 세포 미생물 DNA">
+<a class="card-title field-card-link" href="biotech.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">30</span><span class="field-icon">🧬</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">바이오·생활</span><h3>생명공학</h3><p>세포와 유전자, 미생물 등을 활용해 유용한 기술을 개발합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="bio" data-keywords="식품 음식 먹거리 가공 발효 위생">
+<a class="card-title field-card-link" href="food.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">31</span><span class="field-icon">🥗</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">바이오·생활</span><h3>식품공학</h3><p>식품을 안전하고 맛있게 생산·가공·보관하는 기술을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="bio" data-keywords="농업 생명 작물 스마트팜 식물">
+<a class="card-title field-card-link" href="agricultural.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">32</span><span class="field-icon">🌾</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">바이오·생활</span><h3>농업생명공학</h3><p>농업과 생명과학 기술을 연결해 작물과 농업 시스템을 개선합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article><article class="card field-card" data-category="bio" data-keywords="음향 소리 음악 오디오 스피커 소음 진동">
+<a class="card-title field-card-link" href="acoustic.html" target="_blank" rel="noopener noreferrer">
+ <div class="field-card-top"><span class="field-number">33</span><span class="field-icon">🔊</span><span class="field-arrow">↗</span></div>
+ <span class="field-category">바이오·생활</span><h3>음향공학</h3><p>소리의 발생과 전달, 녹음과 소음 제어 기술을 연구합니다.</p>
+ <span class="click-text">분야 자세히 보기 <b>＋</b></span>
+</a></article></div>
+<div id="search-empty" class="search-empty" hidden><span>⌕</span><strong>검색 결과가 없습니다.</strong>
+<p>다른 키워드로 검색하거나 전체 분야를 확인해 보세요.</p><button type="button" id="reset-fields">전체 분야 보기</button></div>
+</section><section class="field-bottom-note"><span>ENGINEERING IS EVERYWHERE</span>
+<p>하나의 기술도 여러 공학 분야가 함께 힘을 모아 완성합니다.</p></section>
+<footer><p>Engineering World | 고등학교 수행평가</p></footer></main>
+<script src="site.js" defer></script></body></html>
