@@ -123,3 +123,27 @@ footer{border-color:#dedee9!important;color:#9293a3!important}
  html{scroll-behavior:auto}
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* ===== HOME HERO BUTTON TEXT CONTRAST FIX ===== */
+.hero .hero-button{
+    color:#151522 !important;
+    background:#ffffff !important;
+    border:1px solid #ffffff !important;
+    text-shadow:none !important;
+}
+.hero .hero-button span{
+    color:#151522 !important;
+}
+.hero .hero-button:hover,
+.hero .hero-button:focus-visible{
+    color:#ffffff !important;
+    background:linear-gradient(110deg,#625bd0,#238da8) !important;
+    border-color:transparent !important;
+    outline:2px solid rgba(255,255,255,.75);
+    outline-offset:3px;
+}
+.hero .hero-button:hover span,
+.hero .hero-button:focus-visible span{
+    color:#ffffff !important;
+}
