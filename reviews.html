@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Engineering World에 대한 댓글과 리뷰를 남겨보세요.">
+<title>댓글·리뷰 | Engineering World</title>
+<link rel="stylesheet" href="subpages.css"><link rel="stylesheet" href="site-theme.css">
+<link rel="stylesheet" href="reviews.css"><link rel="stylesheet" href="site-polish.css">
+</head><body>
+<aside class="sidebar"><h2>🔧 Engineering</h2><nav>
+<a href="index.html">홈</a><a href="intro.html">공학이란?</a><a href="fields.html">공학 분야</a>
+<a href="skills.html">필요한 능력</a><a href="quiz.html">공학 퀴즈</a><a href="career.html">나의 진로</a>
+<a class="active" href="reviews.html">댓글·리뷰</a></nav></aside>
+<main class="main reviews-main">
+<section class="page-header reviews-hero"><span class="reviews-kicker">ENGINEERING WORLD / COMMUNITY</span>
+<h1>여러분의 생각을<br><em>들려주세요.</em></h1>
+<p>사이트를 둘러본 느낌과 더 추가되었으면 하는 기능을 자유롭게 남겨주세요.</p>
+<div class="reviews-orbit orbit-a"></div><div class="reviews-orbit orbit-b"></div><span class="reviews-hero-index">07 / FEEDBACK</span></section>
+<section class="reviews-layout">
+<div class="review-form-card"><div class="reviews-section-label">WRITE A REVIEW</div><h2>댓글 및 리뷰 작성</h2>
+<p class="reviews-intro">좋았던 점이나 개선하면 좋을 점을 편하게 적어주세요.</p>
+<form id="review-form" class="review-form">
+<label for="review-name">닉네임</label><input id="review-name" name="name" type="text" maxlength="20" placeholder="닉네임을 입력하세요" required>
+<label>별점</label><div class="rating-picker" role="radiogroup" aria-label="별점 선택">
+<input type="radio" id="rating-5" name="rating" value="5" checked><label for="rating-5" aria-label="5점">★</label>
+<input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4" aria-label="4점">★</label>
+<input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3" aria-label="3점">★</label>
+<input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2" aria-label="2점">★</label>
+<input type="radio" id="rating-1" name="rating" value="1"><label for="rating-1" aria-label="1점">★</label></div>
+<label for="review-message">댓글 / 리뷰</label><textarea id="review-message" name="message" rows="5" maxlength="500" placeholder="사이트를 사용하면서 느낀 점을 적어주세요. (최대 500자)" required></textarea>
+<div class="review-form-bottom"><span id="review-char-count">0 / 500</span><button type="submit" class="review-submit">리뷰 등록 <span>↗</span></button></div>
+<p id="review-form-feedback" class="review-form-feedback" role="status" aria-live="polite"></p>
+</form></div>
+<aside class="review-side-card"><span class="review-side-icon">✦</span><span class="reviews-section-label">YOUR VOICE MATTERS</span>
+<h2>작은 의견도<br>큰 개선이 됩니다.</h2><p>여러분의 의견은 Engineering World를 더 편리하고 유익하게 만드는 데 도움이 됩니다.</p>
+<div class="review-side-stat"><strong id="review-total">0</strong><span>REVIEWS ON THIS BROWSER</span></div></aside></section>
+<section class="review-list-section"><div class="review-list-heading"><div><span class="reviews-section-label">COMMUNITY NOTES</span><h2>남겨진 리뷰</h2></div>
+<button type="button" id="clear-my-reviews" class="clear-reviews">이 브라우저의 리뷰 지우기</button></div>
+<div id="review-list" class="review-list" aria-live="polite"><div class="review-empty"><span>✧</span><strong>아직 등록된 리뷰가 없습니다.</strong><p>첫 번째 의견을 남겨보세요!</p></div></div>
+<p class="review-storage-note">저장 안내: 현재 리뷰는 작성한 기기의 브라우저에만 저장됩니다. 다른 방문자에게도 리뷰를 보여주는 공개 게시판을 만들려면 온라인 데이터베이스 연결이 추가로 필요합니다.</p></section>
+<footer><p>Engineering World | 고등학교 수행평가</p></footer></main>
+<script src="site.js" defer></script></body></html>

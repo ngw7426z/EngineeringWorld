@@ -26,3 +26,12 @@ GitHub 적용 방법
 - field-detail.css에는 연구 요약 카드 디자인이 포함되어 있습니다.
 - 33개 상세 HTML 페이지가 모두 필요합니다.
 - 모든 파일을 저장소 최상위(root)에 두세요. index.html과 fields.html이 최상위에 있어야 합니다.
+
+
+[전체 디자인 및 댓글·리뷰 업데이트]
+- 모든 HTML 페이지에 site-polish.css 공통 디자인을 연결했습니다.
+- 사이드바에 댓글·리뷰 메뉴가 추가되었습니다.
+- reviews.html / reviews.css: 닉네임, 별점, 댓글 작성 및 목록 화면입니다.
+- site.js: 리뷰 등록, 목록 출력, 개별 삭제, 이 브라우저의 리뷰 모두 삭제를 지원합니다.
+- 리뷰는 현재 localStorage에 저장되므로 작성한 브라우저에서만 보입니다. 다른 방문자의 리뷰도 모으려면 Firebase/Supabase 같은 서버 데이터베이스 연결이 필요합니다.
+- 새 파일: reviews.html, reviews.css, site-polish.css. 수정된 site.js와 기존 HTML 파일도 모두 업로드하세요.

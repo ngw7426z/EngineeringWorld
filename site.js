@@ -26,3 +26,26 @@ document.addEventListener("DOMContentLoaded", () => {
   apply();
  }
 });
+
+// ===== COMMENTS & REVIEWS: STORED LOCALLY IN THIS BROWSER =====
+document.addEventListener("DOMContentLoaded", () => {
+ const form=document.querySelector("#review-form");
+ if(!form) return;
+ const key="engineeringWorldReviews_v1";
+ const list=document.querySelector("#review-list"), total=document.querySelector("#review-total");
+ const message=document.querySelector("#review-message"), charCount=document.querySelector("#review-char-count");
+ const feedback=document.querySelector("#review-form-feedback"), clear=document.querySelector("#clear-my-reviews");
+ const load=()=>{try{const v=JSON.parse(localStorage.getItem(key)||"[]");return Array.isArray(v)?v.filter(x=>x&&typeof x.id==="string"&&typeof x.name==="string"&&typeof x.message==="string"&&Number.isInteger(x.rating)):[]}catch(_){return[]}};
+ const save=items=>{try{localStorage.setItem(key,JSON.stringify(items));return true}catch(_){feedback.textContent="브라우저 저장 공간을 사용할 수 없습니다.";feedback.style.color="#b45a6a";return false}};
+ const render=()=>{const items=load();total.textContent=String(items.length);list.replaceChildren();
+  if(!items.length){const empty=document.createElement("div");empty.className="review-empty";empty.innerHTML="<span>✧</span><strong>아직 등록된 리뷰가 없습니다.</strong><p>첫 번째 의견을 남겨보세요!</p>";list.appendChild(empty);return}
+  [...items].reverse().forEach(item=>{const article=document.createElement("article");article.className="review-item";const head=document.createElement("div");head.className="review-item-head";const author=document.createElement("span");author.className="review-author";author.textContent=item.name;const date=document.createElement("time");date.className="review-date";date.textContent=item.date;head.append(author,date);const stars=document.createElement("div");stars.className="review-stars";stars.textContent="★".repeat(item.rating)+"☆".repeat(5-item.rating);const text=document.createElement("p");text.className="review-message";text.textContent=item.message;const del=document.createElement("button");del.type="button";del.className="review-delete";del.textContent="이 리뷰 삭제";del.addEventListener("click",()=>{if(save(load().filter(x=>x.id!==item.id)))render()});article.append(head,stars,text,del);list.appendChild(article)});
+ };
+ message.addEventListener("input",()=>charCount.textContent=`${message.value.length} / 500`);
+ form.addEventListener("submit",e=>{e.preventDefault();const name=document.querySelector("#review-name").value.trim();const text=message.value.trim();const rating=Number(form.querySelector('input[name="rating"]:checked')?.value||5);if(!name||!text){feedback.textContent="닉네임과 리뷰 내용을 모두 입력해 주세요.";feedback.style.color="#b45a6a";return}
+  const items=load();items.push({id:`${Date.now()}-${Math.random().toString(36).slice(2,9)}`,name:name.slice(0,20),rating:Math.min(5,Math.max(1,rating)),message:text.slice(0,500),date:new Date().toLocaleString("ko-KR",{year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"})});
+  if(save(items)){form.reset();charCount.textContent="0 / 500";feedback.textContent="리뷰가 이 브라우저에 저장되었습니다.";feedback.style.color="#378c78";render()}
+ });
+ clear.addEventListener("click",()=>{if(!load().length)return;if(confirm("이 브라우저에 저장된 리뷰를 모두 삭제할까요?")){localStorage.removeItem(key);feedback.textContent="이 브라우저의 리뷰를 모두 삭제했습니다.";render()}});
+ render();
+});
