@@ -1,0 +1,48 @@
+/* Engineering World - generated image styles */
+.ew-home-visual,.ew-page-visual,.ew-detail-visual,.ew-card-visual,.ew-mini-visual{
+  background-image:linear-gradient(90deg,rgba(9,10,20,.08),rgba(9,10,20,.02)),var(--ew-visual);
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+}
+.hero,.page-header,.detail-hero{position:relative;isolation:isolate;overflow:hidden}
+.ew-home-visual{
+  position:absolute;z-index:1;right:2.5%;top:9%;width:min(45%,560px);height:82%;
+  border:1px solid rgba(180,190,255,.20);border-radius:28px;
+  opacity:.60;mix-blend-mode:screen;filter:saturate(.88);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 28%,#000 100%);
+  pointer-events:none;
+}
+.hero-content,.hero-top{position:relative;z-index:3}
+.ew-page-visual{
+  position:absolute;z-index:1;right:3%;top:12%;width:min(38%,410px);height:76%;
+  border-radius:20px;opacity:.40;mix-blend-mode:screen;
+  border:1px solid rgba(180,190,255,.18);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 32%,#000 100%);
+  pointer-events:none;
+}
+.page-header h1,.page-header p,.page-header .hero-kicker,.page-header .reviews-kicker{z-index:3;position:relative}
+.ew-card-visual{
+  width:100%;height:132px;margin:0 0 17px;border-radius:12px;
+  background-image:linear-gradient(180deg,rgba(12,14,30,.02),rgba(12,14,30,.28)),var(--ew-visual);
+  box-shadow:inset 0 0 0 1px rgba(110,115,190,.12);
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),filter .35s;
+}
+.field-card:hover .ew-card-visual,.card:hover .ew-card-visual{transform:scale(1.025);filter:saturate(1.13)}
+.field-card .field-card-link,.card .card-title{overflow:hidden}
+.ew-detail-visual{
+  position:absolute;z-index:1;right:3%;top:12%;width:45%;height:76%;border-radius:20px;
+  opacity:.47;mix-blend-mode:screen;border:1px solid rgba(180,190,255,.18);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 35%,#000 100%);
+  pointer-events:none;
+}
+.detail-topline,.detail-icon,.detail-hero h1,.detail-hero p{position:relative;z-index:3}
+.ew-mini-visual{
+  height:106px;margin:-25px -25px 20px;border-radius:13px 13px 0 0;
+  opacity:.93;box-shadow:inset 0 -24px 35px rgba(10,12,30,.12);
+}
+@media(max-width:800px){
+  .ew-home-visual{right:-8%;top:24%;width:65%;height:66%;opacity:.35}
+  .ew-page-visual{right:-8%;top:28%;width:58%;height:65%;opacity:.26}
+  .ew-card-visual{height:150px}
+  .ew-detail-visual{right:-8%;width:58%;opacity:.28}
+}
+@media(prefers-reduced-motion:reduce){.ew-card-visual{transition:none}}
